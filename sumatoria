@@ -1,0 +1,50 @@
+// programa para calcular una sumatoria de numerosde n a m
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+void rep();
+int sumatoria(int a,int b);
+int main()
+{
+    rep();
+
+    return 0;
+}
+void rep()
+{
+    system("cls");
+    int a,b;
+    cout <<  "Ingrese un numero donde empieza la sumatoria"<< endl;
+    cin>>a;
+    if(a<0)
+    {
+        rep();
+    }
+    else
+    {
+        cout <<  "Ingrese un numero donde termina la sumatoria"<< endl;
+        cin>>b;
+        if(b<0)
+        {
+            rep();
+        }
+        else
+        {
+            sumatoria(a,b);
+        }
+    }
+
+
+}
+int sumatoria(int a, int b)
+{
+    long long int s;
+    s=a;
+    while(a<b)
+    {
+        a++;
+        s+=a;
+    }
+    cout << "Su sumatoria es: "<<s;
+    return 0;
+}
